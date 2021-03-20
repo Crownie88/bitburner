@@ -65,13 +65,14 @@ export function initializeMainMenuHeaders(p: IPlayer, dev: boolean=false): boole
             const activeScripts: HTMLElement    = safeGetElement("active-scripts-tab");
             const createProgram: HTMLElement    = safeGetElement("create-program-tab");
             const createProgramNot: HTMLElement = safeGetElement("create-program-notification");
+            const stormtechLab: HTMLElement     = safeGetElement("stormtech-lab-tab");
 
             createProgram.style.display = p.firstProgramAvailable ? "list-item" : "none";
 
             this.classList.toggle("opened");
 
-            const elems: HTMLElement[] = [terminal, createScript, activeScripts, createProgram];
-            const links: HTMLElement[] = [MainMenuLinks.Terminal!, MainMenuLinks.ScriptEditor!, MainMenuLinks.ActiveScripts!, MainMenuLinks.CreateProgram!];
+            const elems: HTMLElement[] = [terminal, createScript, activeScripts, createProgram, stormtechLab];
+            const links: HTMLElement[] = [MainMenuLinks.Terminal!, MainMenuLinks.ScriptEditor!, MainMenuLinks.ActiveScripts!, MainMenuLinks.CreateProgram!, MainMenuLinks.StormTechLab!];
             if (terminal.style.maxHeight) {
                 toggleHeader(false, elems, links);
                 createProgramNot!.style.display = "none";
