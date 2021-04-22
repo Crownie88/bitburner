@@ -1,0 +1,19 @@
+.stormtechlab_row {
+	padding: 0;
+	margin: 0;
+}
+
+.stormtechlab_cell {
+	width: 25px;
+	height: 25px;
+	background-color: #808080;
+	float:left;
+	font-color: white;
+	padding: 0px;
+	margin: 0px;
+	border: 1px solid black;
+}
+
+.stormtechlab_cell:first-child {
+	clear: left;
+}
